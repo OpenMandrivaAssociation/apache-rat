@@ -1,0 +1,20 @@
+--- apache-rat-0.8-20100827/apache-rat-plugin/src/test/java/org/apache/rat/mp/RatCheckMojoTest.java.test	2010-07-13 10:10:23.000000000 -0600
++++ apache-rat-0.8-20100827/apache-rat-plugin/src/test/java/org/apache/rat/mp/RatCheckMojoTest.java	2010-10-28 15:20:11.897580449 -0600
+@@ -61,7 +61,7 @@
+     private Renderer newSiteRenderer()
+             throws Exception
+     {
+-        return (Renderer) container.lookup( Renderer.ROLE, "default" );
++        return (Renderer) getContainer().lookup( Renderer.ROLE, "default" );
+     }
+ 
+     /**
+@@ -129,7 +129,7 @@
+             localRepo = System.getProperty( "user.home" ) + "/.m2/repository";
+         }
+         ArtifactRepositoryLayout repositoryLayout =
+-            (ArtifactRepositoryLayout) container.lookup(ArtifactRepositoryLayout.ROLE, "default" );
++            (ArtifactRepositoryLayout) getContainer().lookup(ArtifactRepositoryLayout.ROLE, "default" );
+         return new DefaultArtifactRepository( "local", "file://" + localRepo, repositoryLayout );
+     }
+ 
