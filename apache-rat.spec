@@ -1,7 +1,7 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name:           apache-rat
 Version:        0.10
-Release:        1.1%{?dist}
+Release:        1.2%{?dist}
 Summary:        Apache Release Audit Tool (RAT)
 
 
