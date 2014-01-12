@@ -1,7 +1,7 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name:           apache-rat
 Version:        0.10
-Release:        1.2%{?dist}
+Release:        1.3%{?dist}
 Summary:        Apache Release Audit Tool (RAT)
 
 
@@ -107,7 +107,11 @@ mkdir -p $RPM_BUILD_ROOT%{_javadir}/%{name}
 mkdir -p $RPM_BUILD_ROOT%{_mavenpomdir}
 
 #Parent pom
+%if 0%{?fedora}
 cp -p pom.xml \
+%else
+install -p -m644 pom.xml \
+%endif
   $RPM_BUILD_ROOT%{_mavenpomdir}/JPP.%{name}-%{name}.pom
 %add_maven_depmap JPP.%{name}-%{name}.pom
 
