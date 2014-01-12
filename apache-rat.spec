@@ -117,7 +117,11 @@ do
   jarname=%{name}-${comp}
   jarfile=$jarname/target/${jarname}-%{version}.jar
   cp -p $jarfile $RPM_BUILD_ROOT%{_javadir}/%{name}/${jarname}.jar
+%if 0%{?fedora}
   cp -p ${jarname}/pom.xml \
+%else
+  install -p -m644 ${jarname}/pom.xml \
+%endif
     $RPM_BUILD_ROOT%{_mavenpomdir}/JPP.%{name}-${jarname}.pom
   %add_maven_depmap JPP.%{name}-${jarname}.pom %{name}/${jarname}.jar -f ${comp}
 done
