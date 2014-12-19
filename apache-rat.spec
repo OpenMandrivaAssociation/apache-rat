@@ -104,7 +104,7 @@ This package contains the API documentation for %{name}.
 
 %build
 # Tests are skipped because of incompatibility with Maven 3
-%mvn_build -s -f
+%mvn_build -s -f -X
 
 %install
 %mvn_install
