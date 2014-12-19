@@ -1,0 +1,30 @@
+From c6e8903a7ed5df9a4e2f7ec212c91da1981161a2 Mon Sep 17 00:00:00 2001
+From: Mikolaj Izdebski <mizdebsk@redhat.com>
+Date: Mon, 11 Aug 2014 14:26:34 +0200
+Subject: [PATCH] Update to Maven Doxia 1.6
+
+---
+ apache-rat-plugin/src/main/java/org/apache/rat/mp/RatReportMojo.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/apache-rat-plugin/src/main/java/org/apache/rat/mp/RatReportMojo.java b/apache-rat-plugin/src/main/java/org/apache/rat/mp/RatReportMojo.java
+index 0394c8a..af97882 100644
+--- a/apache-rat-plugin/src/main/java/org/apache/rat/mp/RatReportMojo.java
++++ b/apache-rat-plugin/src/main/java/org/apache/rat/mp/RatReportMojo.java
+@@ -27,12 +27,12 @@ import org.apache.maven.artifact.resolver.ArtifactResolutionException;
+ import org.apache.maven.artifact.resolver.ArtifactResolver;
+ import org.apache.maven.artifact.versioning.InvalidVersionSpecificationException;
+ import org.apache.maven.artifact.versioning.VersionRange;
+-import org.apache.maven.doxia.sink.render.RenderingContext;
+ import org.apache.maven.doxia.site.decoration.Body;
+ import org.apache.maven.doxia.site.decoration.DecorationModel;
+ import org.apache.maven.doxia.site.decoration.Skin;
+ import org.apache.maven.doxia.siterenderer.Renderer;
+ import org.apache.maven.doxia.siterenderer.RendererException;
++import org.apache.maven.doxia.siterenderer.RenderingContext;
+ import org.apache.maven.doxia.siterenderer.SiteRenderingContext;
+ import org.apache.maven.doxia.siterenderer.sink.SiteRendererSink;
+ import org.apache.maven.plugin.MojoExecutionException;
+-- 
+1.9.3
+
