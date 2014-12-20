@@ -102,6 +102,8 @@ This package contains the API documentation for %{name}.
 # wagon-ssh is not needed in Fedora.
 %pom_xpath_remove pom:extensions
 
+%pom_add_dep org.apache.maven:maven-compat apache-rat-plugin
+
 %build
 # Tests are skipped because of incompatibility with Maven 3
 %mvn_build -s -f -X
