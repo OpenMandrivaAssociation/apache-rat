@@ -6,7 +6,7 @@ Summary:        Apache Release Audit Tool (RAT)
 
 Group:          Development/Java
 License:        ASL 2.0
-URL:            http://creadur.apache.org/rat/
+URL:            https://creadur.apache.org/rat/
 Source0:        http://www.apache.org/dist/creadur/%{name}-%{version}/%{name}-%{version}-src.tar.bz2
 Patch2:         apache-rat-0.8-test.patch
 Patch3:         0001-Update-to-Maven-Doxia-1.6.patch
